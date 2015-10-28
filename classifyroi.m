@@ -46,17 +46,8 @@ else
     trialidx = (1:ntrials)';
     
     for c = 1:crossval
-        
-        if strcmp(decinfo(1:4),'tran')
-            
-            clear testsize; testsize = find(ssfolds==transferto);
-            
-        else
 
-            clear testsize; testsize = find(runfolds==c);
-            
-        end
-        
+        clear testsize; testsize = find(runfolds==c);
         clear test_data; test_data = data(testsize,:);
         clear test_label; test_label = labels(testsize,:);
         
