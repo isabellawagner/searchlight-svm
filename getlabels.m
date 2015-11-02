@@ -13,6 +13,19 @@ if strcmp(decinfo,'task')||strcmp(decinfo,'visual')
         %no control trials
         
         idx.all = find(mytrial.ss_nr==ss & mytrial.corr==1 & mytrial.conf==2 & mytrial.ctrlTrl==0);
+        
+    else if ss == 1
+    
+        if strcmp(memorytype,'recCH')
+
+            idx.all = find(mytrial.ss_nr==ss & mytrial.corr==1 & mytrial.conf==2 & mytrial.ctrlTrl==0);    
+   
+        elseif strcmp(memorytype,'rec')
+    
+            idx.all = find(mytrial.ss_nr==ss & mytrial.ctrlTrl==0);
+   
+        end
+        
     end
     
 elseif strcmp(decinfo,'transfer-task') || strcmp(decinfo,'transfer-visual') 
