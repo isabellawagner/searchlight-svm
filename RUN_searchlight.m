@@ -52,6 +52,8 @@ for subjnr = 1:numel(subjects)
     transferto = 1;
     
     %type of trial (retrieval)
+    %'rec' for all recall trials, or 'recCH' for only
+    %correct and high confidence trials if ss=1 is used for training
     memory_type = 'rec';
     
     %SVM options (dont't show output)
